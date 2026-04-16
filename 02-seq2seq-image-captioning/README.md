@@ -33,4 +33,4 @@ Practical improvements that can improve results may include adding attention (sp
 
 Below is a representative sample from the experiments (see notebook for more examples and quantitative scores)
 
-![Sample result 1](./Seq2Seq-Image_Captioning/img2.png)
+![Sample result 1](./img2.png)
