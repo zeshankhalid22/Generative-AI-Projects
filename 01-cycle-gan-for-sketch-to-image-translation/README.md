@@ -14,8 +14,8 @@ This project uses PyTorch and implements ResNet-based generators and PatchGAN di
 
 Two generators and two discriminators form the core loop:
 
-- Generators (G_AB, G_BA): ResNet-based networks that perform sketch→photo and photo→sketch translation. Residual blocks help preserve spatial structure while refining appearance.
-- Discriminators (D_A, D_B): PatchGAN discriminators that output a grid of local realism scores instead of a single global verdict, encouraging texture-level realism.
+- Generators (G_AB, G_BA): **ResNet-based** networks that perform sketch->photo and photo->sketch translation. Residual blocks help preserve spatial structure while refining appearance.
+- Discriminators (D_A, D_B): **PatchGAN discriminators** that output a grid of local realism scores instead of a single global verdict, encouraging texture-level realism.
 
 Losses:
 - Adversarial loss for realistic targets in each domain.
@@ -32,11 +32,8 @@ Implementation notebook (worked example with training and visualization): [Sketc
 Preprocessing notes:
 - Organize images into two directories: `data/sketches` and `data/photos`.
 - Resize images to 128×128 (or larger if GPU memory allows).
-- Normalize to [-1, 1] to match `tanh` output in generators.
+- Normalize to `[-1, 1]` to match `tanh` output in generators.
 - Use minor augmentations (random horizontal flip) to increase robustness.
-
-Sample dataset images:
-![Sample Images from dataset](./CycleGAN-image1.jpg)
 
 ## Training & Evaluation
 
